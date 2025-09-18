@@ -1,11 +1,19 @@
 @import '../../../assets/styles/media.scss';
 
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 12px;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 12px;
+  }
+
+  &.open {
+    background: var(--color-yellow);
+  }
 
   &__nav-list {
     display: flex;
@@ -14,6 +22,10 @@
 
     @include laptop {
       gap: 30px;
+    }
+
+    @include tablet-s {
+      display: none;
     }
   }
 
@@ -27,6 +39,72 @@
       font-size: 16px;
     }
   }
+
+  &__overlay {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: var(--color-yellow);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    padding-top: 38px;
+    padding-bottom: 20px;
+    transition: max-height 0.2s ease, opacity 0.2s ease;
+    font-family: var(--font-family-other);
+
+    &.active {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    &__nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 25px;
+      padding-left: 30px;
+
+      @include mobile {
+        padding-left: 15px;
+      }
+    }
+
+    &__nav-link {
+      font-family: var(--font-family-other);
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--color-gray);
+    }
+
+    &__nav-item-tel {
+      margin-top: 15px;
+    }
+   
+    &__nav-link-tel {
+      font-family: var(--font-family-other);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--color-gray);
+    }
+
+    &__nav-icons-list {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include tablet-s {
+      display: flex;
+      align-items: flex;
+      align-self: center;
+    }
+  }
 }
 
 .header-container {
@@ -38,5 +116,13 @@
 
   @include tablet {
     padding-inline: 45px;
+  }
+
+  @include tablet-s {
+    padding-inline: 30px;
+  }
+
+  @include mobile {
+    padding-inline: 15px;
   }
 }
