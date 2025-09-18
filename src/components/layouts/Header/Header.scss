@@ -1,0 +1,42 @@
+@import '../../../assets/styles/media.scss';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 12px;
+
+  &__nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    @include laptop {
+      gap: 30px;
+    }
+  }
+
+  &__nav-link {
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-gray);
+
+    @include laptop-s {
+      font-size: 16px;
+    }
+  }
+}
+
+.header-container {
+  padding-inline: 98px;
+
+  @include laptop-s {
+    padding-inline: 80px;
+  }
+
+  @include tablet {
+    padding-inline: 45px;
+  }
+}
