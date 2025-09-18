@@ -1,0 +1,16 @@
+@use './media' as *;
+
+:root {
+  --color-black: #141312;
+  --color-gray: #1A212F;
+  --color-orange: #FF7236;
+  --color-yellow: #FAC663;
+  --color-white: #FFFEFD;
+
+
+  --font-family-base: 'Lato', sans-serif;
+  --font-family-other: 'Rubik', sans-serif;
+
+  --container-padding-x: 98px;
+  --container-width: 1170px;
+}
