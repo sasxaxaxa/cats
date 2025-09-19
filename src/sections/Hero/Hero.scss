@@ -1,0 +1,104 @@
+@import '../../assets//styles/media.scss';
+
+.hero {
+  background: url('/images/hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center center;
+
+  @include laptop-s {
+    background: url('/images/hero-bg-tablet.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  @include tablet-s {
+    background: url('/images/hero-bg-tablet.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  &__inner {
+    padding-block: 200px;
+    padding-left: 198px;
+
+    @include laptop {
+      padding-block: 153px;
+      padding-left: 153px;
+    }
+
+    @media screen and (width <=1300px) {
+      padding-block: 113px;
+      padding-left: 113px;
+    }
+
+    @include laptop-s {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-block: 140px;
+      padding-bottom: 530px;
+    }
+
+    @include tablet-s {
+      padding: 0;
+      padding-bottom: 331px;
+      padding-top: 50px;
+      padding-inline: 22px;
+    }
+
+    @include mobile {
+      padding-bottom: 231px;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family-other);
+    font-weight: 700;
+    font-size: 93px;
+    padding-bottom: 2px;
+
+    @include laptop-m {
+      font-size: 62px;
+    }
+
+    @include mobile {
+      font-size: 44px;
+    }
+  }
+
+  &__city {
+    font-weight: 400;
+    font-size: 21px;
+
+    @include laptop-m {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 38px;
+
+    @include laptop-m {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      text-align: center;
+
+    }
+  }
+}
