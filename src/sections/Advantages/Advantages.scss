@@ -1,0 +1,68 @@
+@import '../../assets/styles/media.scss';
+
+.advantages {
+  padding-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  background: url('/images/paw-bg.png');
+  background-repeat: no-repeat;
+    background-position: 95% 5%;
+
+
+  @include laptop {
+    background-position: 105% 5%;
+
+  }
+
+
+  &__title {
+    font-family: var(--font-family-other);
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--color-gray);
+  }
+
+  &__list {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+}
+
+
+.advantage {
+  box-shadow: 0 0 25px 0 rgba(208, 208, 208, 0.25);
+  background: #fff;
+  width: 370px;
+  height: 321px;
+  border-radius: 8px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 50px;
+
+  &__title {
+    font-family: var(--font-family-other);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+    color: var(--color-gray);
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-gray);
+  }
+
+  &__icon {
+    margin-bottom: 25px;
+  }
+}
