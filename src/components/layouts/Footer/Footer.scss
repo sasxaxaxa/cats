@@ -1,0 +1,99 @@
+@import '../../../assets/styles/media.scss';
+
+.footer {
+  position: relative;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 12px;
+
+    @include tablet-s {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+      padding-block: 30px;
+
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    @include laptop {
+      gap: 30px;
+    }
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+      row-gap: 20px;
+    }
+  }
+
+  &__nav-link {
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-gray);
+
+    @include laptop-s {
+      font-size: 16px;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: row;
+    padding-block: 20px;
+    justify-content: space-between;
+
+    &-text,
+    &-link {
+      font-weight: 400;
+      font-size: 16px;
+      color: #8f8f8f;
+
+      @include laptop {
+        font-size: 12px;
+      }
+    }
+
+
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.footer-container {
+  padding-inline: 98px;
+
+  @include laptop-s {
+    padding-inline: 80px;
+  }
+
+  @include tablet {
+    padding-inline: 45px;
+  }
+
+  @include tablet-s {
+    padding-inline: 30px;
+  }
+
+  @include mobile {
+    padding-inline: 15px;
+  }
+}
+
+.footer-container:not(:last-child) {
+  border-bottom: 2px solid #EFEFEF;
+}

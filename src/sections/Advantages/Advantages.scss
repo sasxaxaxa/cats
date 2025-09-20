@@ -9,14 +9,26 @@
   background-color: var(--color-white);
   background: url('/images/paw-bg.png');
   background-repeat: no-repeat;
-    background-position: 95% 5%;
-
+  background-position: 95% 5%;
+  background-size: 400px;
 
   @include laptop {
     background-position: 105% 5%;
-
+    padding-top: 120px;
+    background-size: 300px;
   }
 
+
+
+  @include tablet {
+    background-size: 200px;
+  }
+
+  @include tablet-s {
+    background-position: 110% 3%;
+    padding-top: 70px;
+
+  }
 
   &__title {
     font-family: var(--font-family-other);
@@ -31,9 +43,26 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     row-gap: 20px;
+
+    @media screen and (width <=1250px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    @include tablet {
+      column-gap: 20px;
+    }
+
+    @include tablet-s {
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+
+    }
+
+
   }
 }
-
 
 .advantage {
   box-shadow: 0 0 25px 0 rgba(208, 208, 208, 0.25);
@@ -45,6 +74,20 @@
   padding-left: 30px;
   padding-right: 50px;
 
+  @include laptop-s {
+    width: 324px;
+    height: 285px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 40px;
+  }
+
+  @include tablet {
+    width: 290px;
+    height: 289px;
+    padding-right: 20px;
+  }
+
   &__title {
     font-family: var(--font-family-other);
     font-weight: 500;
@@ -52,6 +95,16 @@
     line-height: 140%;
     color: var(--color-gray);
     margin-bottom: 5px;
+    text-wrap: nowrap;
+
+    @include laptop-s {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
   }
 
   &__description {
@@ -60,9 +113,28 @@
     font-size: 16px;
     line-height: 140%;
     color: var(--color-gray);
+    text-align: left;
+
+    @include laptop-s {
+      font-size: 15px;
+    }
   }
 
   &__icon {
     margin-bottom: 25px;
+    width: 91px;
+    height: 91px;
+
+    @include laptop-s {
+      width: 75px;
+      height: 75px;
+      margin-bottom: 15px;
+    }
+
+    @include tablet {
+      width: 60px;
+      height: 60px;
+
+    }
   }
 }

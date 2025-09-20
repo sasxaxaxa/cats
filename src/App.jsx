@@ -3,6 +3,7 @@ import './assets/styles/index.js'
 import Logo from './components/ui/Logo/Logo.jsx'
 import Header from "./components/layouts/Header/Header.jsx";
 import Main from "./pages/Main/Main.jsx";
+import Footer from "./components/layouts/Footer/Footer.jsx";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Main/>}/>
           </Routes>
         </main>
+        <Footer />
       </Router>
     </>
   )
