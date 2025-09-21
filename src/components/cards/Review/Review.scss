@@ -1,0 +1,39 @@
+.review {
+  border-radius: 8px;
+  width: 470px;
+  height: 206px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  padding: 35px;
+  gap: 8px;
+
+  box-shadow: 0 0 25px 0 rgba(208, 208, 208, 0.25);
+  background: #FFFFFF;
+
+  &__semicolon {
+    font-weight: 500;
+    font-size: 72px;
+    color: var(--color-yellow);
+    text-align: start;
+    margin-top: -11px;
+  }
+
+  &__info-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  &__publish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    color: #848484;
+    padding-top: 11px;
+  }
+}
