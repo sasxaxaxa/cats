@@ -1,19 +1,19 @@
 import Review from '../../components/cards/Review/Review'
-import Carousel from '../../components/ui/Slider/Slider'
+import Button from '../../components/ui/Button/Button';
+import Carousel from '../../components/ui/Slider/Carousel'
 import reviews from '../Reviews/REVIEWS_DATA.json'
+import { useRef } from 'react';
+import './Reviews.scss'
 
 const Reviews = () => {
+  const sliderRef = useRef(null);
   return (
     <section className="reviews">
-      {/* {reviews.slice(0, 3).map((item, index) => (
-        <Review 
-          key={index}
-          review={item.review}
-          author={item.author}
-          date={item.date}
-        />
-      ))} */}
-      <Carousel />
+      <Carousel sliderRef={sliderRef} />
+      <Button
+        label="lalaalal"
+        onClick={() => sliderRef.current.slickNext()}
+      />
     </section>
   )
 }

@@ -10,7 +10,9 @@ const Button = (props) => {
     href,
     icon,
     iconName,
-    iconPosition = 'after'
+    iconPosition = 'after',
+    onClick, // <--- добавляем сюда
+    ...rest
   } = props
 
   const title = label ? label : ''
@@ -35,7 +37,9 @@ const Button = (props) => {
       )}
       title={title}
       aria-label={title}
+      onClick={onClick}  // <--- ОБЯЗАТЕЛЬНО прокидываем
       {...specificProps}
+      {...rest}
     >
       {iconPosition === 'before' && (
         <div className={iconClass}>
