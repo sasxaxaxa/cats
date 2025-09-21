@@ -1,7 +1,6 @@
 import Review from '../../components/cards/Review/Review'
 import Button from '../../components/ui/Button/Button';
 import Carousel from '../../components/ui/Slider/Carousel'
-import reviews from '../Reviews/REVIEWS_DATA.json'
 import { useRef } from 'react';
 import './Reviews.scss'
 

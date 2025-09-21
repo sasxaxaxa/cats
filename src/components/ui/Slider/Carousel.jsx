@@ -7,7 +7,6 @@ import './Carousel.scss'
 
 const Carousel = ({ sliderRef }) => {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     arrows: false,
