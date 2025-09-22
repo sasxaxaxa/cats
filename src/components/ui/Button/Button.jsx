@@ -11,7 +11,7 @@ const Button = (props) => {
     icon,
     iconName,
     iconPosition = 'after',
-    onClick, // <--- добавляем сюда
+    onClick,
     ...rest
   } = props
 
@@ -37,7 +37,7 @@ const Button = (props) => {
       )}
       title={title}
       aria-label={title}
-      onClick={onClick}  // <--- ОБЯЗАТЕЛЬНО прокидываем
+      onClick={onClick}
       {...specificProps}
       {...rest}
     >

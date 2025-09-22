@@ -5,7 +5,7 @@ import reviews from '../../../sections/Reviews/REVIEWS_DATA.json'
 import Review from '../../cards/Review/Review'
 import './Carousel.scss'
 
-const Carousel = ({ sliderRef }) => {
+const Carousel = ({ sliderRef, data, renderItem}) => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -21,14 +21,10 @@ const Carousel = ({ sliderRef }) => {
       className="slider"
       style={{ paddingInline: "10px", paddingBlock: "44px" }}
     >
-      {reviews.map((item, index) => (
+      {data.map((item, index) => (
         <div key={index} className="carousel-slide">
           <div className="carousel__item-container">
-            <Review 
-              review={item.review}
-              author={item.author}
-              date={item.date}
-            />
+            {renderItem(item, index)}
           </div>
         </div>
       ))}
