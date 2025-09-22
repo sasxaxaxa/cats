@@ -1,9 +1,11 @@
 import classNames from "classnames";
 import { equipmentMap } from "./Equipment";
+import './RoomCard.scss'
+import Button from '../../ui/Button/Button'
 
 const typeMap = {
   economy: "Эконом",
-  economyPlus: "Эконом-плюс",
+  economyPlus: "Эконом плюс",
   comfort: "Комфорт",
   suite: "Сьют",
   lux: "Люкс",
@@ -56,12 +58,12 @@ const RoomCardMini = (props) => {
           {typeMap[type]}
         </h3>
         <p className={`${mainClass}__info-size`}>
-          Размеры (ШхГхВ) - {size}
+          Размеры (ШxГxВ) - {size.join("x")} см
         </p>
         <p className={`${mainClass}__info-square`}>
           Площадь - {square} м2
         </p>
-        <div className={`${mainClass}__equipment`}>
+        <div className={`${mainClass}__info-equipment`}>
           <p>
             Оснащение номера
           </p>
@@ -80,9 +82,19 @@ const RoomCardMini = (props) => {
             </div>
           )}
         </div>
-        <p className={`${mainClass}__info-size`}>
-          Цена за сутки: {price}₽
+        <p className={`${mainClass}__info-price`}>
+          Цена за сутки: <span style={{ fontSize: "18px", fontWeight: "500" }}>{price}₽</span>
         </p>
+      </div>
+      <div className={`${mainClass}__button`}>
+        <Button
+          label="Забронировать"
+          mode="orange"
+          icon="/icons/paw-orange.svg"
+          location="card"
+          iconName="paw-white"
+          href="/"
+        />
       </div>
     </div>
   )

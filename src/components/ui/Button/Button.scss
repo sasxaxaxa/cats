@@ -5,10 +5,12 @@
 
   font-family: var(--font-family-base);
 
-
-
   &-white {
     background-color: var(--color-white);
+  }
+
+  &-orange {
+    background-color: var(--color-orange);
   }
 
   &-hero {
@@ -27,10 +29,37 @@
     padding-top: 8px;
   }
 
+  &-card {
+    max-width: 230px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-white);
+    padding-block: 6px;
+    padding-left: 51px;
+    padding-right: 6px;
+    border-radius: 25px;
+    gap: 40px;
+  }
+
+  &-label-card {
+    padding-top: 8px;
+  }
+
   &-icon-paw-orange {
     background-color: var(--color-orange);
     width: 36px;
     height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+
+  &-icon-paw-white {
+    background-color: var(--color-white);
+    width: 34px;
+    height: 34px;
     display: flex;
     justify-content: center;
     align-items: center;

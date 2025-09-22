@@ -2,7 +2,7 @@ import RoomCardMini from "../../components/cards/RoomCard/RoomCard"
 import roomsData from './ROOMS_DATA.json'
 const Rooms = () => {
   return (
-    <div>
+    <section className="rooms">
       {roomsData.map((item, index) => (
         <RoomCardMini
         key={index}
@@ -11,10 +11,10 @@ const Rooms = () => {
         square={item.square}
         price={item.price}
         equipment={item.equipment}
+        mainPhoto={item.mainPhoto}
         />
-
       ))}
-    </div>
+    </section>
   )
 }
 

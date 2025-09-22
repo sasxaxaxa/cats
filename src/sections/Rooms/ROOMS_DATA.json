@@ -1,56 +1,101 @@
 [
   {
     "type": "economy",
-    "size": [180, 160, 180],
+    "size": [
+      180,
+      160,
+      180
+    ],
     "square": 2.88,
     "equipment": null,
     "price": 600,
-    "mainPhoto": "",
+    "mainPhoto": "/images/rooms/image1.png",
     "otherPhotos": []
   },
   {
     "type": "economyPlus",
-    "size": [90, 100, 180],
+    "size": [
+      90,
+      100,
+      180
+    ],
     "square": 0.9,
-    "equipment": ["bed", "scratchingPost"],
+    "equipment": [
+      "bed",
+      "scratchingPost"
+    ],
     "price": 200,
-    "mainPhoto": "",
+    "mainPhoto": "/images/rooms/image2.png",
     "otherPhotos": []
   },
   {
     "type": "comfort",
-    "size": [100, 125, 180],
+    "size": [
+      100,
+      125,
+      180
+    ],
     "square": 1.13,
-    "equipment": ["bed", "playComplex", "scratchingPost"],
+    "equipment": [
+      "bed",
+      "playComplex",
+      "scratchingPost"
+    ],
     "price": 250,
-    "mainPhoto": "",
+    "mainPhoto": "/images/rooms/image3.png",
     "otherPhotos": []
   },
   {
     "type": "suite",
-    "size": [125, 125, 180],
+    "size": [
+      125,
+      125,
+      180
+    ],
     "square": 1.56,
-    "equipment": ["bed", "playComplex", "scratchingPost"],
+    "equipment": [
+      "bed",
+      "playComplex",
+      "scratchingPost"
+    ],
     "price": 350,
-    "mainPhoto": "",
+    "mainPhoto": "/images/rooms/image4.png",
     "otherPhotos": []
   },
   {
     "type": "lux",
-    "size": [160, 160, 180],
+    "size": [
+      160,
+      160,
+      180
+    ],
     "square": 2.56,
-    "equipment": ["bed", "house", "playComplex", "scratchingPost"],
+    "equipment": [
+      "bed",
+      "house",
+      "playComplex",
+      "scratchingPost"
+    ],
     "price": 500,
-    "mainPhoto": "",
+    "mainPhoto": "/images/rooms/image5.png",
     "otherPhotos": []
   },
   {
     "type": "superLux",
-    "size": [90, 70, 180],
+    "size": [
+      90,
+      70,
+      180
+    ],
     "square": 0.63,
-    "equipment": ["bed", "house", "playComplex", "scratchingPost"],
+    "equipment": [
+      "bed",
+      "house",
+      "playComplex",
+      "scratchingPost"
+    ],
     "price": 100,
-    "mainPhoto": "",
+    "mainPhoto": "/images/rooms/image6.png",
     "otherPhotos": []
   }
 ]
