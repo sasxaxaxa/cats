@@ -1,4 +1,4 @@
-@import '../../../assets/styles/media.scss';
+@use '../../../styles/_index' as *;
 
 .header {
   position: relative;
